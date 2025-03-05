@@ -13,7 +13,8 @@
 > 
 > [나경원](https://github.com/kw601)
 > 
-
+> [장지요](https://github.com/wldy4627)
+>
 
 ## 💁‍♂️ 스터디 규칙
 ### 문제 풀이
@@ -84,12 +85,13 @@ git push origin {생성한 브랜치}
 
 <details><summary>📎 3월 문제집</summary>
 
-|주차|1|2|3|4|5|
-|:---:|:---:|:---:|:---:|:---:|:---:|
-|**1주차**<br> (03.02 ~ 03.08)|[점프](https://www.acmicpc.net/problem/1890)|[어른 상어](https://www.acmicpc.net/problem/19237)|[색종이 붙이기](https://www.acmicpc.net/problem/17136)|[게리맨더링 2](https://www.acmicpc.net/problem/17779)|[직사각형](https://www.acmicpc.net/problem/2527)|
-|**2주차**<br> (03.09 ~ 03.15)|[멀쩡한 사각형](https://school.programmers.co.kr/learn/courses/30/lessons/62048)|[택배상자](https://school.programmers.co.kr/learn/courses/30/lessons/131704)|[코딩테스트 공부](https://school.programmers.co.kr/learn/courses/30/lessons/118668)|[등산코스 정하기](https://school.programmers.co.kr/learn/courses/30/lessons/118669)|[방금그곡](https://school.programmers.co.kr/learn/courses/30/lessons/17683)|
-|**3주차**<br> (03.16 ~ 03.22)|[마법의 엘리베이터](https://school.programmers.co.kr/learn/courses/30/lessons/148653)|[미로 탈출](https://school.programmers.co.kr/learn/courses/30/lessons/159993)|[표현 가능한 이진트리](https://school.programmers.co.kr/learn/courses/30/lessons/150367)|[톱니바퀴](https://www.acmicpc.net/problem/14891)|[코드트리 빵](https://www.codetree.ai/training-field/frequent-problems/codetree-mon-bread/description?page=3&pageSize=20&username=)|
-|**4주차**<br> (03.23 ~ 03.29)|[스티커](https://www.acmicpc.net/problem/9465)|[트리](https://www.acmicpc.net/problem/4803)|[인구 이동](https://www.acmicpc.net/problem/16234)|[뱀](https://www.acmicpc.net/problem/3190)|[꼬리잡기놀이](https://www.codetree.ai/training-field/frequent-problems/tail-catch-play/description?page=3&pageSize=20&username=)||
+|             주차              |                                       1                                       |                                     2                                     |                                        3                                        |                                      4                                       |                                                               5                                                                |
+|:---------------------------:|:-----------------------------------------------------------------------------:|:-------------------------------------------------------------------------:|:-------------------------------------------------------------------------------:|:----------------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------------------:|
+| **1주차**<br> (03.01 ~ 03.06) |                  [체육복](https://school.programmers.co.kr/learn/courses/30/lessons/42862)                  | [최소직사각형](https://school.programmers.co.kr/learn/courses/30/lessons/86491) |    [N으로표현](https://school.programmers.co.kr/learn/courses/30/lessons/42895)     |   [타겟넘버](https://school.programmers.co.kr/learn/courses/30/lessons/43165)    |                                                                                                                                |
+|   **2주차**<br> (03. ~ 03.)   |                  [점프](https://www.acmicpc.net/problem/1890)                   |              [어른 상어](https://www.acmicpc.net/problem/19237)               |                [색종이 붙이기](https://www.acmicpc.net/problem/17136)                 |               [게리맨더링 2](https://www.acmicpc.net/problem/17779)               |                                          [직사각형](https://www.acmicpc.net/problem/2527)                                          |
+|   **3주차**<br> (03. ~ 03.)   |  [멀쩡한 사각형](https://school.programmers.co.kr/learn/courses/30/lessons/62048)   | [택배상자](https://school.programmers.co.kr/learn/courses/30/lessons/131704)  |  [코딩테스트 공부](https://school.programmers.co.kr/learn/courses/30/lessons/118668)   | [등산코스 정하기](https://school.programmers.co.kr/learn/courses/30/lessons/118669) |                            [방금그곡](https://school.programmers.co.kr/learn/courses/30/lessons/17683)                             |
+|   **4주차**<br> (03. ~ 03.)   | [마법의 엘리베이터](https://school.programmers.co.kr/learn/courses/30/lessons/148653) | [미로 탈출](https://school.programmers.co.kr/learn/courses/30/lessons/159993) | [표현 가능한 이진트리](https://school.programmers.co.kr/learn/courses/30/lessons/150367) |                [톱니바퀴](https://www.acmicpc.net/problem/14891)                 | [코드트리 빵](https://www.codetree.ai/training-field/frequent-problems/codetree-mon-bread/description?page=3&pageSize=20&username=) |
+
 
 </details>
 
@@ -132,12 +134,14 @@ git push origin {생성한 브랜치}
 
 </details>
 
-<details>
-🖇️ 추가 문제집
-|주차|1|2|3|
-|:---:|:---:|:---:|:---:|
-|**1주차**<br> (08.21 ~ 08.17)|[상담원 인원](https://school.programmers.co.kr/learn/courses/30/lessons/214288)|[불량 사용자](https://school.programmers.co.kr/learn/courses/30/lessons/64064)|[과제 진행하기](https://school.programmers.co.kr/learn/courses/30/lessons/176962)||
-|**1주차**<br> (01.25 ~ 01.31)|[부등호](https://www.acmicpc.net/problem/2529)|[암호 만들기](https://www.acmicpc.net/problem/1759)||
-|**4주차**<br> (02.16 ~ 02.22)|[문자열 폭발](https://www.acmicpc.net/problem/9935)|[고냥이](https://www.acmicpc.net/problem/16472)|[가능한 시험 점수](https://swexpertacademy.com/main/code/problem/problemDetail.do?problemLevel=4&contestProbId=AWHPkqBqAEsDFAUn&categoryId=AWHPkqBqAEsDFAUn&categoryType=CODE&problemTitle=&orderBy=RECOMMEND_COUNT&selectCodeLang=JAVA&select-1=4&pageSize=10&pageIndex=1&&&&&&&&&&)|[배열 돌리기 4](https://www.acmicpc.net/problem/17406)|[파이프 옮기기 1](https://www.acmicpc.net/problem/17070)|
-|**5주차**<br> (02.23 ~ 03.01)|[연구소](https://www.acmicpc.net/problem/14502)|[가스관](https://www.acmicpc.net/problem/2931)|[싸움땅](https://www.codetree.ai/training-field/frequent-problems/battle-ground/description?page=3&pageSize=20&username=bsu1209)|[2048 (Easy)](https://www.acmicpc.net/problem/12100)|[점심 식사시간](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5-BEE6AK0DFAVl&)||
+
+<details><summary>📎 기타 문제집</summary>
+
+|              주차               |1|2|3|4|
+|:-----------------------------:|:---:|:---:|:---:|:---:|
+| **3-4주차**<br> (03.23 ~ 03.29) |[스티커](https://www.acmicpc.net/problem/9465)|[트리](https://www.acmicpc.net/problem/4803)|[인구 이동](https://www.acmicpc.net/problem/16234)|[뱀](https://www.acmicpc.net/problem/3190)|[꼬리잡기놀이](https://www.codetree.ai/training-field/frequent-problems/tail-catch-play/description?page=3&pageSize=20&username=)||
+|  **1주차**<br> (08.21 ~ 08.17)  |[상담원 인원](https://school.programmers.co.kr/learn/courses/30/lessons/214288)|[불량 사용자](https://school.programmers.co.kr/learn/courses/30/lessons/64064)|[과제 진행하기](https://school.programmers.co.kr/learn/courses/30/lessons/176962)||
+|  **1주차**<br> (01.25 ~ 01.31)  |[부등호](https://www.acmicpc.net/problem/2529)|[암호 만들기](https://www.acmicpc.net/problem/1759)||
+|  **4주차**<br> (02.16 ~ 02.22)  |[문자열 폭발](https://www.acmicpc.net/problem/9935)|[고냥이](https://www.acmicpc.net/problem/16472)|[가능한 시험 점수](https://swexpertacademy.com/main/code/problem/problemDetail.do?problemLevel=4&contestProbId=AWHPkqBqAEsDFAUn&categoryId=AWHPkqBqAEsDFAUn&categoryType=CODE&problemTitle=&orderBy=RECOMMEND_COUNT&selectCodeLang=JAVA&select-1=4&pageSize=10&pageIndex=1&&&&&&&&&&)|[배열 돌리기 4](https://www.acmicpc.net/problem/17406)|[파이프 옮기기 1](https://www.acmicpc.net/problem/17070)|
+|  **5주차**<br> (02.23 ~ 03.01)  |[연구소](https://www.acmicpc.net/problem/14502)|[가스관](https://www.acmicpc.net/problem/2931)|[싸움땅](https://www.codetree.ai/training-field/frequent-problems/battle-ground/description?page=3&pageSize=20&username=bsu1209)|[2048 (Easy)](https://www.acmicpc.net/problem/12100)|[점심 식사시간](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5-BEE6AK0DFAVl&)||
 </details>
