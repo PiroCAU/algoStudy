@@ -1,9 +1,9 @@
 # 🔵 앙대팟 Algorithm Study
 코딩테스트의 강자가 되기 위한 스터디입니다.
 
-**정기 회의** : 매주 토요일 오후
+**정기 회의** : 매주 목요일 저녁
 
-**마감 기한** : 매주 금요일 정오
+**마감 기한** : 회의 전날 자정까지
 - 벌금 : 문제당 4000원 (벌금은 제작진들이 회식비로 맛있게 사용할 예정입니다.)
 
 ## 👥 참여자
@@ -88,7 +88,7 @@ git push origin {생성한 브랜치}
 |             주차              |                                       1                                       |                                     2                                     |                                        3                                        |                                      4                                       |                                                               5                                                                |
 |:---------------------------:|:-----------------------------------------------------------------------------:|:-------------------------------------------------------------------------:|:-------------------------------------------------------------------------------:|:----------------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------------------:|
 | **1주차**<br> (03.01 ~ 03.06) |                  [체육복](https://school.programmers.co.kr/learn/courses/30/lessons/42862)                  | [최소직사각형](https://school.programmers.co.kr/learn/courses/30/lessons/86491) |    [N으로표현](https://school.programmers.co.kr/learn/courses/30/lessons/42895)     |   [타겟넘버](https://school.programmers.co.kr/learn/courses/30/lessons/43165)    |                                                                                                                                |
-|   **2주차**<br> (03. ~ 03.)   |                  [점프](https://www.acmicpc.net/problem/1890)                   |              [어른 상어](https://www.acmicpc.net/problem/19237)               |                [색종이 붙이기](https://www.acmicpc.net/problem/17136)                 |               [게리맨더링 2](https://www.acmicpc.net/problem/17779)               |                                          [직사각형](https://www.acmicpc.net/problem/2527)                                          |
+| **2주차**<br> (03.06 ~ 03.12) |                  [점프](https://www.acmicpc.net/problem/1890)                   |              [어른 상어](https://www.acmicpc.net/problem/19237)               |                [색종이 붙이기](https://www.acmicpc.net/problem/17136)                 |               [게리맨더링 2](https://www.acmicpc.net/problem/17779)               |                                          [직사각형](https://www.acmicpc.net/problem/2527)                                          |
 |   **3주차**<br> (03. ~ 03.)   |  [멀쩡한 사각형](https://school.programmers.co.kr/learn/courses/30/lessons/62048)   | [택배상자](https://school.programmers.co.kr/learn/courses/30/lessons/131704)  |  [코딩테스트 공부](https://school.programmers.co.kr/learn/courses/30/lessons/118668)   | [등산코스 정하기](https://school.programmers.co.kr/learn/courses/30/lessons/118669) |                            [방금그곡](https://school.programmers.co.kr/learn/courses/30/lessons/17683)                             |
 |   **4주차**<br> (03. ~ 03.)   | [마법의 엘리베이터](https://school.programmers.co.kr/learn/courses/30/lessons/148653) | [미로 탈출](https://school.programmers.co.kr/learn/courses/30/lessons/159993) | [표현 가능한 이진트리](https://school.programmers.co.kr/learn/courses/30/lessons/150367) |                [톱니바퀴](https://www.acmicpc.net/problem/14891)                 | [코드트리 빵](https://www.codetree.ai/training-field/frequent-problems/codetree-mon-bread/description?page=3&pageSize=20&username=) |
 
