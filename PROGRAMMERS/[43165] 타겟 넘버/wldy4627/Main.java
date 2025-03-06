@@ -1,4 +1,4 @@
-package PROGRAMMERS.타겟넘버.wldy4627;
+package PROGRAMMERS.[43165] 타겟 넘버.wldy4627;
 
 import java.util.Scanner;
 

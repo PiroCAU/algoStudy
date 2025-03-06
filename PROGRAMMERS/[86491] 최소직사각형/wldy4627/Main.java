@@ -1,5 +1,5 @@
+package PROGRAMMERS.[86491] 최소직사각형.wldy4627;
 import java.util.*;
-import java.io.*;
 
 public class Main {
     public static void main(String[] args) {

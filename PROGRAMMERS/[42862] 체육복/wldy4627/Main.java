@@ -1,4 +1,4 @@
-package PROGRAMMERS.체육복.wldy4627;
+package PROGRAMMERS.[42862] 체육복.wldy4627;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Scanner;

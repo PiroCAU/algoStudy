@@ -1,4 +1,4 @@
-package PROGRAMMERS.N으로표현.wldy4627;
+package PROGRAMMERS.[42895] N으로 표현.wldy4627;
 
 import java.util.*;
 
