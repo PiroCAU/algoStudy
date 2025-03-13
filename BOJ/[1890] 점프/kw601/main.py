@@ -1,3 +1,5 @@
+# 오른쪽 , 왼쪽으로 각 칸에 적혀있는 수만큼 이동
+# 0,0 -> n-1, n-1로 가는 경로의 개수
 import sys
 
 input = sys.stdin.read
