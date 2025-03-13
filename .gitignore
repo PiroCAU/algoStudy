@@ -2,3 +2,28 @@
 .DS_Store
 .idea
 shwntest/
+
+# IntelliJ IDEA 관련 파일
+.idea/
+*.iml
+*.iws
+out/
+
+# Gradle 관련 파일 (Gradle 사용 시)
+.gradle/
+build/
+
+# Maven 관련 파일 (Maven 사용 시)
+target/
+
+# Java 빌드 결과물
+*.class
+*.jar
+*.war
+*.ear
+
+# OS 및 기타 불필요한 파일
+Thumbs.db
+
+# 로그 파일 및 환경 설정 파일
+*.log
