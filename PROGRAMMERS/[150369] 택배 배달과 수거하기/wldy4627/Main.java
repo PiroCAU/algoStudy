@@ -1,5 +1,3 @@
-package pro.p150369.wldy4627;
-
 public class Main {
 
     public long solution(int cap, int n, int[] deliveries, int[] pickups) {
