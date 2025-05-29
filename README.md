@@ -111,7 +111,7 @@ git push origin {생성한 브랜치}
 |주차|1|2|3|4|5|
 |:---:|:---:|:---:|:---:|:---:|:---:|
 |**1주차**<br> (05.23 ~ 05.29)|[혼자서 하는 틱택토](https://school.programmers.co.kr/learn/courses/30/lessons/160585)|[혼자 놀기의 달인](https://school.programmers.co.kr/learn/courses/30/lessons/131130)|[광물 캐기](https://school.programmers.co.kr/learn/courses/30/lessons/172927)|||
-|**2주차**<br> (05.11 ~ 05.17)|[디펜스 게임](https://school.programmers.co.kr/learn/courses/30/lessons/142085)|[리코쳇 로봇](https://school.programmers.co.kr/learn/courses/30/lessons/169199)|[요격 시스템](https://school.programmers.co.kr/learn/courses/30/lessons/181188)|[인사 고과](https://school.programmers.co.kr/learn/courses/30/lessons/152995)|[경주로 건설](https://school.programmers.co.kr/learn/courses/30/lessons/67259)|
+|**2주차**<br> (05.11 ~ 05.17)|[디펜스 게임](https://school.programmers.co.kr/learn/courses/30/lessons/142085)|[리코쳇 로봇](https://school.programmers.co.kr/learn/courses/30/lessons/169199)|[요격 시스템](https://school.programmers.co.kr/learn/courses/30/lessons/181188)|||
 |**3주차**<br> (05.18 ~ 05.31)|[피리 부는 사나이](https://www.acmicpc.net/problem/16724)|[RGB거리 2](https://www.acmicpc.net/problem/17404)|[개똥벌레](https://www.acmicpc.net/problem/3020)|[해킹](https://www.acmicpc.net/problem/10282)|[작업](https://www.acmicpc.net/problem/2056)||
 
 </details>
