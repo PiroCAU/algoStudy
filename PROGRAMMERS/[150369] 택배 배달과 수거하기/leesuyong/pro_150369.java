@@ -12,7 +12,7 @@ public class pro_150369 {
             int p = n - 1; // 수거 끝 인덱스
 
             while (d >= 0 || p >= 0) {
-                // 가장 먼 거리 찾기
+                // 가장 먼 거리 찾기: 만약 처리할 물량이 없으면 패스
                 while (d >= 0 && deliveries[d] == 0) d--;
                 while (p >= 0 && pickups[p] == 0) p--;
 
