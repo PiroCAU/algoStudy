@@ -41,7 +41,6 @@ public class BOJ_17404 {
                 list[i][2] = Math.min(list[i-1][0], list[i-1][1]) + map[i][2];
             }
 
-            System.out.println(Arrays.deepToString(list));
 
             for (int c = 0; c < 3; c++) {
                 if (c != first) {
