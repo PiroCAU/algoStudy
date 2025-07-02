@@ -1,0 +1,53 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.StringTokenizer;
+
+public class Main {
+
+    public static void main(String[] args) throws IOException {
+        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(bf.readLine());
+
+        int n = Integer.parseInt(st.nextToken());
+        int[] inputs = new int[n];
+        int[] result = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            st = new StringTokenizer(bf.readLine());
+            inputs[i] = Integer.parseInt(st.nextToken());
+        }
+
+        if (n < 3) {
+            result[n-1] = 0;
+            for (int input : inputs) {
+                result[n-1] += input;
+            }
+            System.out.println(result[n-1]);
+        } else {
+            //초기값 계산
+            result[0] = inputs[0];
+            result[1] = result[0] + inputs[1];
+            result[2] =  Math.max(
+                    inputs[0] + inputs[1],
+                    Math.max(
+                            inputs[1] + inputs[2],
+                            inputs[0] + inputs[2]
+                    )
+            );
+
+            for (int i = 3; i < n; i++) {
+                result[i] =  Math.max(
+                        result[i-1],
+                        Math.max(
+                                result[i-2] + inputs[i], result[i-3] + inputs[i-1] + inputs[i]
+                        )
+                );
+            }
+
+            System.out.println(result[n-1]);
+        }
+    }
+}
