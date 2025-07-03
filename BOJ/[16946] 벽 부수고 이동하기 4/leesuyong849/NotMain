@@ -1,0 +1,68 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayDeque;
+import java.util.StringTokenizer;
+
+public class BOJ_16946 {
+
+    static int[][] map;
+    static int N, M;
+    static int[] directX = {0,0,-1,1};
+    static int[] directY = {1, -1, 0, 0};
+
+    public static void main(String[] args) throws IOException {
+        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(bf.readLine());
+
+        N = Integer.parseInt(st.nextToken());
+        M = Integer.parseInt(st.nextToken());
+        map = new int[N][M];
+
+        for (int i = 0; i < N; i++) {
+            st = new StringTokenizer(bf.readLine());
+            String line = st.nextToken();
+            for (int j = 0; j < M; j++) {
+                map[i][j] =  line.charAt(j) - '0';
+            }
+        }
+
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < M; j++) {
+                if (map[i][j] == 1) {
+
+                    int result = 1;
+                    int[][] visited = new int[N][M];
+                    result = moving(i, j, result, visited);
+                    map[i][j] = result;
+                }
+            }
+        }
+
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < M; j++) {
+                System.out.print(map[i][j] % 10);
+            }
+            System.out.println();
+        }
+    }
+
+    public static int moving(int a, int b, int result, int[][] visited) {
+
+        for (int i = 0; i < 4; i++) {
+
+            int nextX = a + directX[i];
+            int nextY = b + directY[i];
+
+            if (nextX >= 0 && nextX < N && nextY >=0 && nextY <M) {
+                if (map[nextX][nextY] == 0 && visited[nextX][nextY] == 0) {
+                    result++;
+                    visited[nextX][nextY] = 1;
+                    result = moving(nextX, nextY, result, visited);
+                }
+            }
+
+        }
+        return result;
+    }
+}
