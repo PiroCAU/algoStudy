@@ -11,7 +11,7 @@
 > 
 > [이수용](https://github.com/leesuyong849)
 > 
-> [나경원](https://github.com/kw601)
+> [나경원](https://github.com/nkw601)
 > 
 > [장지요](https://github.com/wldy4627)
 >
