@@ -37,5 +37,4 @@ public class Main {
         if (top == 0) System.out.println("FRULA");
         else System.out.println(new String(stack, 0, top));
     }
-
 }
