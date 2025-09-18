@@ -58,7 +58,7 @@ class Solution {
 		
 		// 출발지 넣기
 		for(int gate : gates) {
-			q.offer(new int[] {gate, 0}); // 현위치, intensity
+			q.offer(new int[] {gate, 0}); // 현위치, intensity 
 			intense[gate] = 0;
 		}
 		
