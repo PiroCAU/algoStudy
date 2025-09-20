@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class PRO_118669 {
+public class Main {
 
     static List<List<Node>> nodes;
 
@@ -40,7 +40,7 @@ public class PRO_118669 {
 
     private static int[] dijkstra(int n, int[] gates, int[] summits, boolean[] isSummit) {
         int[] intensity = new int[n + 1];
-        Arrays.fill(intensity, Integer.MAX_VALUE); // ← 먼저 무한대로 채우기
+        Arrays.fill(intensity, Integer.MAX_VALUE); // 일단 최대값으로 채우고 최솟값 비교하기
 
         PriorityQueue<Node> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a.w));
 
@@ -55,8 +55,8 @@ public class PRO_118669 {
             int u = cur.x;
             int curInt = cur.w;
 
-            if (curInt > intensity[u]) continue;   // stale entry skip
-            if (isSummit[u]) continue;             // 정상이면 확장하지 않음
+            if (curInt > intensity[u]) continue;   // 현재 가야할 비용이 이전 최솟값보다 크면 생략
+            if (isSummit[u]) continue;             // 정상이면 끝
 
             for (Node nx : nodes.get(u)) {
                 int v = nx.x;
