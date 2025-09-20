@@ -1,7 +1,7 @@
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class Main {
+public class PRO_118669 {
 
     static List<List<Node>> nodes;
 
@@ -21,14 +21,20 @@ public class Main {
             nodes.add(new ArrayList<Node>());
         }
 
+        boolean[] isGate = new boolean[n + 1];
+        boolean[] isSummit = new boolean[n + 1];
+        for (int g : gates)   isGate[g] = true;
+        for (int s : summits) isSummit[s] = true;
+
         for (int[] path : paths) {
             int x = path[0];
             int y = path[1];
             int w = path[2];
 
-            if (isGate(x, gates) || isSummit(y, summits)) {
+            //정상과 시작점은 단방향 나머지는 양방향
+            if (isGate[x] || isSummit[y]) {
                 nodes.get(x).add(new Node(y, w));
-            } else if (isGate(y, gates) || isSummit(x, summits)) {
+            } else if (isGate[y] || isSummit[x]) {
                 nodes.get(y).add(new Node(x, w));
             } else {
                 nodes.get(x).add(new Node(y, w));
@@ -36,67 +42,53 @@ public class Main {
             }
         }
 
-        return dij(n, gates, summits);
+        return dij(n, gates, summits, isSummit);
 
 
     }
 
-    private static int[] dij(int n, int[] gates, int[] summits) {
+    private static int[] dij(int n, int[] gates, int[] summits, boolean[] isSummit) {
         int[] intensity = new int[n + 1];
+        Arrays.fill(intensity, Integer.MAX_VALUE); // ← 먼저 무한대로 채우기
 
-        //게이트를 큐에 추가한다. -> 다익스트라 알고리즘에서 시작점을 지정
-        Deque<Node> que = new ArrayDeque<>();
-        for (int gate : gates) {
-            que.add(new Node(gate, 0));
-            intensity[gate] = 0;        //시작지점 값은 0
+        PriorityQueue<Node> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a.w));
+
+        // 여러 출발지(게이트) 초기화
+        for (int g : gates) {
+            intensity[g] = 0;
+            pq.offer(new Node(g, 0));
         }
 
+        while (!pq.isEmpty()) {
+            Node cur = pq.poll();
+            int u = cur.x;
+            int curInt = cur.w;
 
-        Arrays.fill(intensity, Integer.MAX_VALUE);
+            if (curInt > intensity[u]) continue;   // stale entry skip
+            if (isSummit[u]) continue;             // 정상이면 확장하지 않음
 
-        while (!que.isEmpty()) {
-            Node poll = que.poll();
-
-            if (poll.w > intensity[poll.x]) continue;       //x까지 가는 w값이 이미 정해진 값보다 더 크다면 그냥 생략
-            for (int i = 0; i < nodes.get(poll.x).size(); i++) {
-                Node nextNode = nodes.get(poll.x).get(i);
-
-                //최소값 갱신
-                int dis = Math.max(intensity[poll.x], nextNode.w);
-                if (intensity[nextNode.x] > dis) {
-                    intensity[nextNode.x] = dis;
-                    que.add(new Node(nextNode.x, dis));
+            for (Node nx : nodes.get(u)) {
+                int v = nx.x;
+                int cand = Math.max(intensity[u], nx.w); // 경로 내 최댓값 최소화
+                if (cand < intensity[v]) {
+                    intensity[v] = cand;
+                    if (!isSummit[v]) {            // 정상은 넣지 않아도 됨(선택 최적화)
+                        pq.offer(new Node(v, cand));
+                    }
                 }
             }
         }
 
-        int summitNum = Integer.MAX_VALUE;
-        int minW = Integer.MAX_VALUE;
-
+        // 결과 선택: intensity 최소, 같으면 번호가 작은 정상
         Arrays.sort(summits);
-
-        for (int summit : summits) {
-            if (intensity[summit] < minW) {
-                minW = intensity[summit];
-                summitNum = summit;
+        int bestSummit = -1, bestInt = Integer.MAX_VALUE;
+        for (int s : summits) {
+            if (intensity[s] < bestInt) {
+                bestInt = intensity[s];
+                bestSummit = s;
             }
         }
-
-        return new int[]{summitNum, minW};
-    }
-
-    private static boolean isGate(int num, int[] gates) {
-        for (int gate : gates) {
-            if (num == gate) return true;
-        }
-        return false;
-    }
-
-    private static boolean isSummit(int num, int[] summits) {
-        for (int summit : summits) {
-            if (num == summit) return true;
-        }
-        return false;
+        return new int[]{bestSummit, bestInt};
     }
 }
 
