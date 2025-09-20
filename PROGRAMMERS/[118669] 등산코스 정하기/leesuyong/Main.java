@@ -1,13 +1,12 @@
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class PRO_118669 {
 
     static List<List<Node>> nodes;
 
     static class Node {
-        int x; int w;
-
+        int x;
+        int w;
         public Node(int x, int w) {
             this.x = x;
             this.w = w;
@@ -17,9 +16,7 @@ public class PRO_118669 {
     public int[] solution(int n, int[][] paths, int[] gates, int[] summits) {
 
         nodes = new ArrayList<>();
-        for (int i = 1; i <= n; i++) {
-            nodes.add(new ArrayList<Node>());
-        }
+        for (int i = 0; i <= n; i++) nodes.add(new ArrayList<>());
 
         boolean[] isGate = new boolean[n + 1];
         boolean[] isSummit = new boolean[n + 1];
@@ -27,11 +24,7 @@ public class PRO_118669 {
         for (int s : summits) isSummit[s] = true;
 
         for (int[] path : paths) {
-            int x = path[0];
-            int y = path[1];
-            int w = path[2];
-
-            //정상과 시작점은 단방향 나머지는 양방향
+            int x = path[0], y = path[1], w = path[2];
             if (isGate[x] || isSummit[y]) {
                 nodes.get(x).add(new Node(y, w));
             } else if (isGate[y] || isSummit[x]) {
@@ -42,12 +35,10 @@ public class PRO_118669 {
             }
         }
 
-        return dij(n, gates, summits, isSummit);
-
-
+        return dijkstra(n, gates, summits, isSummit);
     }
 
-    private static int[] dij(int n, int[] gates, int[] summits, boolean[] isSummit) {
+    private static int[] dijkstra(int n, int[] gates, int[] summits, boolean[] isSummit) {
         int[] intensity = new int[n + 1];
         Arrays.fill(intensity, Integer.MAX_VALUE); // ← 먼저 무한대로 채우기
 
@@ -91,4 +82,3 @@ public class PRO_118669 {
         return new int[]{bestSummit, bestInt};
     }
 }
-
