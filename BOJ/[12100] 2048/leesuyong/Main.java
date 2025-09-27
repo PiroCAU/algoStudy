@@ -26,6 +26,7 @@ public class Main {
 
         dfs(0, board);
         System.out.println(max);
+
     }
 
     static void dfs(int depth, int[][] map) {
@@ -34,7 +35,7 @@ public class Main {
             return;
         }
 
-        for (int dir = 0; dir < 4; dir++) { // 0: up, 1: down, 2: left, 3: right
+        for (int dir = 0; dir < 4; dir++) {
             int[][] moved = move(dir, map);
             dfs(depth + 1, moved);
         }
@@ -49,10 +50,20 @@ public class Main {
     static int[][] move(int dir, int[][] ints) {
         int[][] map = copy(ints);
         switch (dir) {
-            case 0 -> moveUp(map);
-            case 1 -> movedown(map);
-            case 2 -> moveleft(map);
-            case 3 -> moveRight(map);
+            case 0:
+                moveUp(map);
+                break;
+            case 1:
+                movedown(map);
+                break;
+            case 2:
+                moveleft(map);
+                break;
+            case 3:
+                moveRight(map);
+                break;
+            default:
+                throw new IllegalArgumentException("invalid dir: " + dir);
         }
         return map;
     }
@@ -70,18 +81,21 @@ public class Main {
     public static int[][] moveUp(int[][] map) {
 
         for (int i = 0; i < N; i++) {
-            for (int j = 0; j < N - 1; j++) {
-                if (map[i][j] != 0 && map[i][j + 1] == map[i][j]) {
-                    map[i][j] = map[i][j] * 2;
-                    map[i][j+1] = 0;
+
+            //일단 값을 전부 한쪽으로 모은다.
+            int[] ints = Arrays.stream(map[i]).filter(o -> o != 0).toArray();
+            for (int j = 0; j < ints.length - 1 ; j++) {
+                if (ints[j] != 0 && ints[j + 1] == ints[j]) {
+                    ints[j] = ints[j] * 2;
+                    ints[j+1] = 0;
                 }
             }
-            int[] ints = Arrays.stream(map[i]).filter(o -> o != 0).toArray();
+            int[] ints2 = Arrays.stream(map[i]).filter(o -> o != 0).toArray();
 
             //더해진 값이 저장하거나 0을 저장하거나
             for (int j = 0; j < N; j++) {
-                if (ints.length > j) {
-                    map[i][j] = ints[j];
+                if (ints2.length > j) {
+                    map[i][j] = ints2[j];
                 } else {
                     map[i][j] = 0;
                 }
@@ -93,18 +107,21 @@ public class Main {
 
     public static int[][] movedown(int[][] map) {
         for (int i = 0; i < N; i++) {
-            for (int j = 0; j < N - 1; j++) {
-                if (map[i][j] != 0 && map[i][j + 1] == map[i][j]) {
-                    map[i][j] = map[i][j] * 2;
-                    map[i][j+1] = 0;
+
+            //일단 값을 전부 한쪽으로 모은다.
+            int[] ints = Arrays.stream(map[i]).filter(o -> o != 0).toArray();
+            for (int j = 0; j < ints.length - 1; j++) {
+                if (ints[j] != 0 && ints[j + 1] == ints[j]) {
+                    ints[j] = ints[j] * 2;
+                    ints[j+1] = 0;
                 }
             }
-            int[] ints = Arrays.stream(map[i]).filter(o -> o != 0).toArray();
+            int[] ints2 = Arrays.stream(map[i]).filter(o -> o != 0).toArray();
 
             //더해진 값이 저장하거나 0을 저장하거나
             for (int j = 0; j < N; j++) {
-                if (ints.length > j) {
-                    map[i][N - j - 1] = ints[j];
+                if (ints2.length > j) {
+                    map[i][N - j - 1] = ints2[j];
                 } else {
                     map[i][N - j - 1] = 0;
                 }
