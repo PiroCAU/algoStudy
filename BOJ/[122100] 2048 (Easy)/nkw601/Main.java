@@ -6,6 +6,7 @@ import java.util.StringTokenizer;
 public class Main {
 	static int N, maxNum;
 	static int[][] board;
+	
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st;
@@ -141,6 +142,7 @@ public class Main {
 	    board = result;
 	}
 }
+
 
 /*
  * 합쳐질 예정인 블럭을 모아서 한 번에 처리
