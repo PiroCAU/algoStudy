@@ -1,5 +1,3 @@
-package BOJ_20125_쿠키의신체측정;
-
 import javax.swing.text.Position;
 import java.awt.*;
 import java.io.BufferedReader;
