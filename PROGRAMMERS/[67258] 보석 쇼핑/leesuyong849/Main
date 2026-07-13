@@ -1,0 +1,37 @@
+import java.util.*;
+
+class Solution {
+    public int[] solution(String[] gems) {
+        Map<String, Integer> map = new HashMap<>();
+        //보석의 종류
+        Set<String> set = new HashSet<>();
+        //가장 먼저 추가된 것부터 제거
+        Queue<String> queue = new LinkedList<>();
+
+        int len = Integer.MAX_VALUE;
+        int start = 0;
+        int idx = 0;
+
+        set.addAll(Arrays.asList(gems));
+
+        for (int i = 0; i < gems.length; i++) {
+            String gem = gems[i];
+            map.put(gem, map.getOrDefault(gem, 0) + 1);
+            queue.add(gem);
+
+            while (map.get(queue.peek()) > 1) {
+                map.put(queue.peek(), map.get(queue.poll()) - 1);
+                idx++;
+            }
+
+            //모든 보석을 모은 경우
+            if (map.size() == set.size() && len > (i - idx)) {
+                len = i - idx;
+                start = idx + 1;
+            }
+        }
+
+        return new int[]{start, start + len};
+    }
+
+}

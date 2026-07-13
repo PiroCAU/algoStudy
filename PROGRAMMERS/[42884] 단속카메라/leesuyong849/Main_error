@@ -1,0 +1,26 @@
+import java.util.Arrays;
+import java.util.Comparator;
+
+class Solution {
+    public int solution(int[][] routes) {
+        // 진출 지점(끝점) 기준 오름차순 정렬
+        Arrays.sort(routes, Comparator.comparingInt(r -> r[1]));
+
+        int answer = 0;
+        int cameraPos = Integer.MIN_VALUE; // 아직 카메라 없음
+
+        for (int[] route : routes) {
+            int enter = route[0];
+            int exit = route[1];
+
+            // 현재 설치된 카메라가 이 차량의 진입 지점보다 앞에 있다면
+            // (즉, 이 차량을 못 잡는다면) 새 카메라를 진출 지점에 설치
+            if (cameraPos < enter) {
+                cameraPos = exit;
+                answer++;
+            }
+        }
+
+        return answer;
+    }
+}
